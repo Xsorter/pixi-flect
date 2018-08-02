@@ -139,7 +139,7 @@ for (let j = 0; j < data.height; j++) {
 }
 mainLayer.position.set(initX, initY)
 //mainLayer.addChild(getNet(sprites))
-gredientRadial(sprites, 15, 12, 8)
+gredientRadial(sprites, 10, 9, 8)
 //gredientAnimRadial(sprites, -10, 44, 600)
 applyLightTintToAll()
 camera.addChild(mainLayer)
@@ -342,13 +342,13 @@ function applyLight(sprite, lightFactor) {
 
 const origcan = document.createElement('canvas');
 origcan.width = window.innerWidth
-const wPixels = 70
+const wPixels = 80
 var origctx = origcan.getContext('2d'),
     img = new Image,
     factor = Math.floor(window.innerWidth / wPixels);
 let hPixels = 0
 img.onload = pixelate;
-img.src = './assets/logowhite.png';
+img.src = './assets/bday.jpg'; 
 const orginIsReady = false
 
 const pixcan = document.createElement('canvas')
@@ -360,10 +360,10 @@ function pixelate () {
     hPixels = Math.floor(origcan.height / factor)
     if (!orginIsReady) {
         // document.body.appendChild(origcan)
-        origctx.imageSmoothingEnabled =
+        origctx.imageSmoothingEnabled = 
         origctx.mozImageSmoothingEnabled =
         origctx.msImageSmoothingEnabled =
-        origctx.webkitImageSmoothingEnabled = false;
+        origctx.webkitImageSmoothingEnabled = true;
         origctx.drawImage(img, 0, 0, origcan.width, origcan.height)
     }
     var fw = (origcan.width / factor)|0,
